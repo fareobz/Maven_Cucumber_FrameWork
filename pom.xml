@@ -90,24 +90,21 @@
 
 	</dependencies>
 
+	<!-- Maven Surefire Plugin We will be specifying runner class -->
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M4</version>
-				
 				<configuration>
-				<!-- <perCoreThreadCount>false</perCoreThreadCount>
-				<threadCount>4</threadCount>
-				<perCoreThreadCount>false</perCoreThreadCount> -->
-				<!--  <useUnlimitedThreads>true</useUnlimitedThreads> -->
 					<includes>
 						<include>**/*SmokeRunner.java</include>
 					</includes>
+
 					<testFailureIgnore>true</testFailureIgnore>
+
 				</configuration>
-	
 			</plugin>
 
 
@@ -124,7 +121,7 @@
 						</goals>
 						<configuration>
 							<projectName>Hrms</projectName>
-<!-- look for cucumber-maven reports -->
+
 							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}</outputDirectory>
 							<!-- optional, defaults to outputDirectory if not specified -->

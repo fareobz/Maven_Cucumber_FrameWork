@@ -13,7 +13,7 @@ import com.cucumber_maven.utils.Constants;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass {
+public class BaseClass extends PageInitializer {
 
 	public static WebDriver driver;
 

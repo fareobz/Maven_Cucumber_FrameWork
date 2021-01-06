@@ -6,17 +6,19 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features/amazon.feature", 
+@CucumberOptions(
+features = "src/test/resources/features", 
 glue = "com/cucumber_maven/steps",
-dryRun = false,
-tags = "@maro",
+dryRun = false, 
+strict = true, 
+monochrome = true,
+
+tags = {"@smoke"}, 
 plugin = {
-		"pretty", // prints gherkin steps in console
-		"html:target/cucumber-default-report", // create basic html report in specified location
-		"json:target/cucumber.json"
-		// how to handle concurancy in java
-		// extend the thread, implement runable.
-})
+		"pretty"
+		, "html:target/cucumber-default-report"
+		, "json:target/cucumber.json"
+		, "rerun:target/failed.txt" })
 public class SmokeRunner {
 
 }

@@ -19,6 +19,7 @@ public class Hooks {
 	public void end(Scenario scenario) {
 		
 		byte[] pic;
+	
 		if(scenario.isFailed()) {
 			pic=CommonMethods.takeScreenshot("failed/"+scenario.getName());
 		}else {

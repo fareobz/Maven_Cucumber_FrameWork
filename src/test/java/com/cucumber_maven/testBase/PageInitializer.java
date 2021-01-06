@@ -2,12 +2,12 @@ package com.cucumber_maven.testBase;
 
 import pages.amazon.com.AmazonFrontPage;
 
-public class PageInitializer extends BaseClass {
+public class PageInitializer {
 	
-	public static AmazonFrontPage search;
+	public static AmazonFrontPage amazon;
 	
 	public static void initialize() {
-		search= new AmazonFrontPage();
+		amazon= new AmazonFrontPage();
 	}
 
 }
